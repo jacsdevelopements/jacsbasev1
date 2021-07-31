@@ -40,10 +40,6 @@ Cette base NE possède pas 'essentialmode', étant donné que celui-ci n'est plu
 
 - Pour le Setting Up A Server: https://docs.fivem.net/docs/server-manual/setting-up-a-server/.
 
-- Pour accéder directement aux artéfacts données et distribuées par FiveM, afin de pouvoir télécharger la base du serveur (base FiveM et non la mienne): https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/.
-
-- Pour télécharger directement l'artéfact 4162 de Google Drive: https://drive.google.com/file/d/1_0UiBYx6xxLjtu4N9J8hBNhO52S1nLTv/view?usp=sharing. 
-
 - Pour enregistrer sa clé de licence: https://keymaster.fivem.net/.
 
 - Pour connaître son IPV4, l'IP qui sera utilisée pour enregistrer votre clé de licence: https://www.whatismyip.com/fr/.
@@ -65,7 +61,7 @@ Lien pour télécharger 7Zip: https://www.7-zip.org/download.html
 #     PENSEZ A LIRE LE LISEZMOI.MD dans le GitHub.     #
 ########################################################
 
-- Le lien permettant de télécharger le fichier possédant toutes les ressources: https://drive.google.com/file/d/1lEqmQVCEQ9DjoaEOPa9b7s-M588_Xje8/view?usp=sharing
+- Le lien permettant de télécharger le fichier possédant toutes les ressources: https://drive.google.com/file/d/1TqmiNcol3vZUBakTW3sV0-AOfz_Nn0lR/view?usp=sharing
 
 ╭─━━━━━─╯Liens Discord╰─━━━━━─╮
 
