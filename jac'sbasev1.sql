@@ -1,4 +1,3 @@
-
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
@@ -1669,7 +1668,7 @@ CREATE TABLE `users` (
   `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
   `job2_grade` int(11) DEFAULT 0,
   `jeton` int(11) DEFAULT 0,
-  `pet` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `pet` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
