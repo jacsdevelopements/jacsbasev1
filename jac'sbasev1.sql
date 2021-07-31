@@ -1665,7 +1665,7 @@ CREATE TABLE `users` (
   `phone_number` int(11) DEFAULT NULL,
   `last_property` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `job` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
+  `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
   `job2_grade` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '0',
   `jeton` int(11) DEFAULT 0,
   `pet` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
