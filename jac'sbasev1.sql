@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 31 juil. 2021 à 19:14
+-- Généré le : sam. 31 juil. 2021 à 22:13
 -- Version du serveur :  10.4.19-MariaDB
 -- Version de PHP : 7.3.28
 
@@ -1655,6 +1655,7 @@ CREATE TABLE `users` (
   `job_grade` int(11) DEFAULT 0,
   `loadout` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
+  `permission_level` int(11) DEFAULT 0,
   `firstname` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `lastname` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dateofbirth` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1668,7 +1669,7 @@ CREATE TABLE `users` (
   `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
   `job2_grade` int(11) DEFAULT 0,
   `jeton` int(11) DEFAULT 0,
-  `pet` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `pet` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
