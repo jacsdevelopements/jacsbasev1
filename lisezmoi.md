@@ -41,4 +41,6 @@ Vous êtes prêts pour démarrer l'installation de la base!
 Je vous remercie d'avoir regardé cette vidéo! N'hésitez pas à vous abonner pour ne pas manquer les prochains tutoriels!
 
 En espérant vous revoir sur ma chaîne Twitch (https://www.twitch.tv/jacqsfr).
+
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━
