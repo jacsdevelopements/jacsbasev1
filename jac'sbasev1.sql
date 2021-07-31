@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 31 juil. 2021 à 14:58
+-- Généré le : sam. 31 juil. 2021 à 19:14
 -- Version du serveur :  10.4.19-MariaDB
 -- Version de PHP : 7.3.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `serveurtest`
+-- Base de données : `tutoyoutube`
 --
 
 -- --------------------------------------------------------
@@ -627,23 +627,23 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`name`, `label`, `investRate`, `rate`) VALUES
-('24/7', 'TNYFVN', 4.75, 'up'),
-('Ammu-Nation', 'AMNA', -1.52, 'down'),
-('Augury Insurance', 'AUGIN', 3.84, 'down'),
-('Downtown Cab Co.', 'DCC', 1.07, 'up'),
-('ECola', 'ECLA', -4.59, 'down'),
-('Fleeca', 'FLCA', 1.37, 'down'),
-('Globe Oil', 'GLBO', 0.5, 'down'),
-('GoPostal', 'GPSTL', -4.72, 'down'),
-('Lifeinvader', 'LIVDR', -0.31, 'down'),
-('Los Santos Air', 'LSA', -0.66, 'down'),
-('Los Santos Customs', 'LSC', -0.62, 'down'),
-('Los Santos Transit', 'LST', 4.49, 'up'),
-('Maze Bank', 'MBANK', 1.84, 'down'),
-('Post OP', 'PSTP', 1.71, 'down'),
-('RON', 'RON', 1.38, 'down'),
-('Up-n-Atom Burger', 'UNAB', 4.48, 'up'),
-('Weazel', 'NEWS', 4, 'up');
+('24/7', 'TNYFVN', 1.09, 'up'),
+('Ammu-Nation', 'AMNA', 4.98, 'up'),
+('Augury Insurance', 'AUGIN', 2.78, 'down'),
+('Downtown Cab Co.', 'DCC', -1.07, 'down'),
+('ECola', 'ECLA', 3.6, 'up'),
+('Fleeca', 'FLCA', -1.06, 'down'),
+('Globe Oil', 'GLBO', 3.41, 'up'),
+('GoPostal', 'GPSTL', -1.67, 'down'),
+('Lifeinvader', 'LIVDR', 4.26, 'up'),
+('Los Santos Air', 'LSA', 2.39, 'up'),
+('Los Santos Customs', 'LSC', 1.22, 'up'),
+('Los Santos Transit', 'LST', -2.74, 'down'),
+('Maze Bank', 'MBANK', -0.09, 'up'),
+('Post OP', 'PSTP', -0.54, 'up'),
+('RON', 'RON', 3.85, 'down'),
+('Up-n-Atom Burger', 'UNAB', -0.06, 'down'),
+('Weazel', 'NEWS', 3.76, 'up');
 
 -- --------------------------------------------------------
 
@@ -1430,13 +1430,13 @@ CREATE TABLE `licenses` (
 --
 
 INSERT INTO `licenses` (`type`, `label`) VALUES
-('boat', 'Boat License'),
+('boat', 'Permis bâteau'),
 ('dmv', 'Code de la route'),
 ('drive', 'Permis de conduire'),
 ('drive_bike', 'Permis moto'),
 ('drive_truck', 'Permis camion'),
 ('weapon', 'Permis de port d\'arme'),
-('weed_processing', 'Weed Processing License');
+('weed_processing', 'Permis de drogues');
 
 -- --------------------------------------------------------
 
@@ -1666,17 +1666,10 @@ CREATE TABLE `users` (
   `last_property` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
-  `job2_grade` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '0',
+  `job2_grade` int(11) DEFAULT 0,
   `jeton` int(11) DEFAULT 0,
   `pet` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`identifier`, `accounts`, `group`, `inventory`, `job`, `job_grade`, `loadout`, `position`, `firstname`, `lastname`, `dateofbirth`, `sex`, `height`, `skin`, `is_dead`, `phone_number`, `last_property`, `status`, `job2`, `job2_grade`, `jeton`, `pet`) VALUES
-('4bc432a124415b93cc214332e5c0749ab5d15e20', '{\"money\":99798214,\"bank\":100052640,\"black_money\":0}', 'admin', '{\"tabacblond\":40}', 'tabac', 2, '{\"WEAPON_STUNGUN\":{\"ammo\":100},\"WEAPON_FLASHLIGHT\":{\"ammo\":100}}', '{\"y\":-3485.4,\"z\":14.1,\"heading\":30.9,\"x\":-1019.1}', 'Maxence', 'Collignon', '10/25/2002', 'm', 48, '{\"tshirt_2\":0,\"eyebrows_6\":0,\"eye_color\":0,\"helmet_1\":-1,\"chin_4\":0,\"blush_3\":0,\"hair_color_1\":0,\"makeup_4\":0,\"chain_1\":0,\"sex\":0,\"cheeks_3\":0,\"arms_2\":0,\"age_1\":0,\"glasses_2\":0,\"bodyb_3\":-1,\"nose_1\":0,\"decals_2\":0,\"neck_thickness\":0,\"nose_6\":0,\"nose_4\":0,\"jaw_2\":0,\"watches_2\":0,\"lipstick_2\":0,\"bodyb_1\":-1,\"bags_2\":0,\"torso_1\":0,\"chest_2\":0,\"pants_1\":3,\"eyebrows_2\":0,\"dad\":0,\"makeup_2\":0,\"bags_1\":0,\"beard_4\":0,\"bodyb_4\":0,\"blemishes_1\":0,\"decals_1\":2,\"hair_1\":0,\"hair_color_2\":0,\"beard_2\":0,\"eyebrows_5\":0,\"pants_2\":0,\"nose_5\":0,\"mask_2\":0,\"blush_1\":0,\"nose_3\":0,\"cheeks_1\":0,\"mom\":21,\"blush_2\":0,\"sun_1\":0,\"torso_2\":5,\"eyebrows_1\":0,\"ears_2\":0,\"beard_1\":0,\"sun_2\":0,\"lipstick_4\":0,\"bodyb_2\":0,\"eyebrows_3\":0,\"eyebrows_4\":0,\"moles_1\":0,\"beard_3\":0,\"bproof_1\":0,\"chest_3\":0,\"complexion_1\":0,\"helmet_2\":0,\"watches_1\":-1,\"bracelets_1\":-1,\"chin_1\":0,\"lipstick_3\":0,\"arms\":5,\"jaw_1\":0,\"ears_1\":-1,\"tshirt_1\":4,\"complexion_2\":0,\"chin_2\":0,\"blemishes_2\":0,\"bproof_2\":0,\"chest_1\":0,\"cheeks_2\":0,\"lipstick_1\":0,\"hair_2\":0,\"chin_3\":0,\"lip_thickness\":0,\"chain_2\":0,\"shoes_2\":0,\"makeup_3\":0,\"face_md_weight\":50,\"bracelets_2\":0,\"age_2\":0,\"shoes_1\":4,\"makeup_1\":0,\"mask_1\":0,\"moles_2\":0,\"nose_2\":0,\"skin_md_weight\":50,\"glasses_1\":0,\"eye_squint\":0}', 0, 17264, NULL, '[{\"val\":863100,\"percent\":86.31,\"name\":\"hunger\"},{\"val\":897325,\"percent\":89.7325,\"name\":\"thirst\"},{\"val\":0,\"percent\":0.0,\"name\":\"drunk\"}]', 'vagos', '0', 0, 'boar');
 
 -- --------------------------------------------------------
 
@@ -1702,13 +1695,6 @@ CREATE TABLE `user_licenses` (
   `type` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `owner` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `user_licenses`
---
-
-INSERT INTO `user_licenses` (`id`, `type`, `owner`) VALUES
-(1, 'boat', '4bc432a124415b93cc214332e5c0749ab5d15e20');
 
 -- --------------------------------------------------------
 
