@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 31 juil. 2021 à 22:13
+-- Généré le : dim. 01 août 2021 à 22:07
 -- Version du serveur :  10.4.19-MariaDB
 -- Version de PHP : 7.3.28
 
@@ -627,23 +627,23 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`name`, `label`, `investRate`, `rate`) VALUES
-('24/7', 'TNYFVN', 1.09, 'up'),
-('Ammu-Nation', 'AMNA', 4.98, 'up'),
-('Augury Insurance', 'AUGIN', 2.78, 'down'),
-('Downtown Cab Co.', 'DCC', -1.07, 'down'),
-('ECola', 'ECLA', 3.6, 'up'),
-('Fleeca', 'FLCA', -1.06, 'down'),
-('Globe Oil', 'GLBO', 3.41, 'up'),
-('GoPostal', 'GPSTL', -1.67, 'down'),
-('Lifeinvader', 'LIVDR', 4.26, 'up'),
-('Los Santos Air', 'LSA', 2.39, 'up'),
-('Los Santos Customs', 'LSC', 1.22, 'up'),
-('Los Santos Transit', 'LST', -2.74, 'down'),
-('Maze Bank', 'MBANK', -0.09, 'up'),
-('Post OP', 'PSTP', -0.54, 'up'),
-('RON', 'RON', 3.85, 'down'),
-('Up-n-Atom Burger', 'UNAB', -0.06, 'down'),
-('Weazel', 'NEWS', 3.76, 'up');
+('24/7', 'TNYFVN', -3.95, 'down'),
+('Ammu-Nation', 'AMNA', -4.9, 'down'),
+('Augury Insurance', 'AUGIN', 3.84, 'up'),
+('Downtown Cab Co.', 'DCC', -2.85, 'down'),
+('ECola', 'ECLA', 1.93, 'up'),
+('Fleeca', 'FLCA', -1.51, 'up'),
+('Globe Oil', 'GLBO', -3.84, 'down'),
+('GoPostal', 'GPSTL', -3.94, 'down'),
+('Lifeinvader', 'LIVDR', -2.25, 'up'),
+('Los Santos Air', 'LSA', 3.13, 'up'),
+('Los Santos Customs', 'LSC', -3.19, 'up'),
+('Los Santos Transit', 'LST', -2.25, 'up'),
+('Maze Bank', 'MBANK', -0.39, 'down'),
+('Post OP', 'PSTP', 2.92, 'up'),
+('RON', 'RON', 2.44, 'down'),
+('Up-n-Atom Burger', 'UNAB', 2.22, 'down'),
+('Weazel', 'NEWS', -3.34, 'down');
 
 -- --------------------------------------------------------
 
@@ -1227,8 +1227,8 @@ INSERT INTO `jobs` (`name`, `label`, `whitelisted`, `SecondaryJob`) VALUES
 ('tailor', 'Couturier', 0, '0'),
 ('taxi', 'Taxi', 1, '0'),
 ('triades', 'Triades', 1, '1'),
-('unemployed', 'Chômeur', 0, '0'),
-('unemployed2', 'Chômeur des gangs', 0, '1'),
+('unemployed', 'RSA Légal', 0, '0'),
+('unemployed2', 'RSA Illégal', 0, '1'),
 ('unicorn', 'Unicorn', 1, '0'),
 ('vagos', 'Vagos', 1, '1'),
 ('vigne', 'Vigneron', 1, '0');
@@ -1243,11 +1243,11 @@ CREATE TABLE `job_grades` (
   `id` int(11) NOT NULL,
   `job_name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `grade` int(11) NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `label` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `salary` int(11) NOT NULL,
-  `skin_male` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `skin_female` longtext COLLATE utf8mb4_unicode_ci NOT NULL
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `label` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary` int(11) NOT NULL DEFAULT 0,
+  `skin_male` longtext COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '{}',
+  `skin_female` longtext COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '{}'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1255,7 +1255,7 @@ CREATE TABLE `job_grades` (
 --
 
 INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
-(1, 'unemployed', 0, 'unemployed', 'Chômeur', 200, '{}', '{}'),
+(1, 'unemployed', 0, 'unemployed', 'Chômeur', 1000, '{}', '{}'),
 (2, 'ambulance', 0, 'ambulance', 'Ambulancier', 20, '{\"tshirt_2\":0,\"hair_color_1\":5,\"glasses_2\":3,\"shoes\":9,\"torso_2\":3,\"hair_color_2\":0,\"pants_1\":24,\"glasses_1\":4,\"hair_1\":2,\"sex\":0,\"decals_2\":0,\"tshirt_1\":15,\"helmet_1\":8,\"helmet_2\":0,\"arms\":92,\"face\":19,\"decals_1\":60,\"torso_1\":13,\"hair_2\":0,\"skin\":34,\"pants_2\":5}', '{\"tshirt_2\":3,\"decals_2\":0,\"glasses\":0,\"hair_1\":2,\"torso_1\":73,\"shoes\":1,\"hair_color_2\":0,\"glasses_1\":19,\"skin\":13,\"face\":6,\"pants_2\":5,\"tshirt_1\":75,\"pants_1\":37,\"helmet_1\":57,\"torso_2\":0,\"arms\":14,\"sex\":1,\"glasses_2\":0,\"decals_1\":0,\"hair_2\":0,\"helmet_2\":0,\"hair_color_1\":0}'),
 (3, 'ambulance', 1, 'doctor', 'Medecin', 40, '{\"tshirt_2\":0,\"hair_color_1\":5,\"glasses_2\":3,\"shoes\":9,\"torso_2\":3,\"hair_color_2\":0,\"pants_1\":24,\"glasses_1\":4,\"hair_1\":2,\"sex\":0,\"decals_2\":0,\"tshirt_1\":15,\"helmet_1\":8,\"helmet_2\":0,\"arms\":92,\"face\":19,\"decals_1\":60,\"torso_1\":13,\"hair_2\":0,\"skin\":34,\"pants_2\":5}', '{\"tshirt_2\":3,\"decals_2\":0,\"glasses\":0,\"hair_1\":2,\"torso_1\":73,\"shoes\":1,\"hair_color_2\":0,\"glasses_1\":19,\"skin\":13,\"face\":6,\"pants_2\":5,\"tshirt_1\":75,\"pants_1\":37,\"helmet_1\":57,\"torso_2\":0,\"arms\":14,\"sex\":1,\"glasses_2\":0,\"decals_1\":0,\"hair_2\":0,\"helmet_2\":0,\"hair_color_1\":0}'),
 (4, 'ambulance', 2, 'chief_doctor', 'Medecin-chef', 60, '{\"tshirt_2\":0,\"hair_color_1\":5,\"glasses_2\":3,\"shoes\":9,\"torso_2\":3,\"hair_color_2\":0,\"pants_1\":24,\"glasses_1\":4,\"hair_1\":2,\"sex\":0,\"decals_2\":0,\"tshirt_1\":15,\"helmet_1\":8,\"helmet_2\":0,\"arms\":92,\"face\":19,\"decals_1\":60,\"torso_1\":13,\"hair_2\":0,\"skin\":34,\"pants_2\":5}', '{\"tshirt_2\":3,\"decals_2\":0,\"glasses\":0,\"hair_1\":2,\"torso_1\":73,\"shoes\":1,\"hair_color_2\":0,\"glasses_1\":19,\"skin\":13,\"face\":6,\"pants_2\":5,\"tshirt_1\":75,\"pants_1\":37,\"helmet_1\":57,\"torso_2\":0,\"arms\":14,\"sex\":1,\"glasses_2\":0,\"decals_1\":0,\"hair_2\":0,\"helmet_2\":0,\"hair_color_1\":0}'),
@@ -1285,7 +1285,7 @@ INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, 
 (42, 'vigne', 1, 'novice', 'Vigneron', 750, '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":0,\"tshirt_2\":0,\"torso_1\":56,\"torso_2\":0,\"shoes_1\":27,\"shoes_2\":0,\"pants_1\":36, \"pants_2\":0, \"arms\":63, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
 (43, 'vigne', 2, 'cdisenior', 'Chef de chai', 1200, '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":0,\"tshirt_2\":0,\"torso_1\":56,\"torso_2\":0,\"shoes_1\":27,\"shoes_2\":0,\"pants_1\":36, \"pants_2\":0, \"arms\":63, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
 (44, 'vigne', 3, 'boss', 'Patron', 1600, '{\"tshirt_1\":57,\"tshirt_2\":0,\"torso_1\":13,\"torso_2\":5,\"shoes_1\":7,\"shoes_2\":2,\"pants_1\":9, \"pants_2\":7, \"arms\":11, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}', '{\"tshirt_1\":15,\"tshirt_2\":0,\"torso_1\":14,\"torso_2\":15,\"shoes_1\":12,\"shoes_2\":0,\"pants_1\":9, \"pants_2\":5, \"arms\":1, \"helmet_1\":11, \"helmet_2\":0,\"bags_1\":0,\"bags_2\":0,\"ears_1\":0,\"glasses_1\":0,\"ears_2\":0,\"glasses_2\":0}'),
-(45, 'unemployed2', 0, 'unemployed2', 'Chômeur des gangs', 0, '', ''),
+(45, 'unemployed2', 0, 'unemployed2', 'Chômeur', 500, '', ''),
 (46, 'army', 0, 'recruit', 'Soldat', 1200, '{}', '{}'),
 (47, 'army', 1, 'firstclass', '1er Classe', 1350, '{}', '{}'),
 (48, 'army', 2, 'capo', 'Caporal', 1500, '{}', '{}'),
@@ -1669,7 +1669,7 @@ CREATE TABLE `users` (
   `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
   `job2_grade` int(11) DEFAULT 0,
   `jeton` int(11) DEFAULT 0,
-  `pet` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `pet` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
