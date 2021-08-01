@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 01 août 2021 à 22:07
+-- Généré le : dim. 01 août 2021 à 23:16
 -- Version du serveur :  10.4.19-MariaDB
 -- Version de PHP : 7.3.28
 
@@ -627,23 +627,23 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`name`, `label`, `investRate`, `rate`) VALUES
-('24/7', 'TNYFVN', -3.95, 'down'),
-('Ammu-Nation', 'AMNA', -4.9, 'down'),
-('Augury Insurance', 'AUGIN', 3.84, 'up'),
-('Downtown Cab Co.', 'DCC', -2.85, 'down'),
-('ECola', 'ECLA', 1.93, 'up'),
-('Fleeca', 'FLCA', -1.51, 'up'),
-('Globe Oil', 'GLBO', -3.84, 'down'),
-('GoPostal', 'GPSTL', -3.94, 'down'),
-('Lifeinvader', 'LIVDR', -2.25, 'up'),
-('Los Santos Air', 'LSA', 3.13, 'up'),
-('Los Santos Customs', 'LSC', -3.19, 'up'),
-('Los Santos Transit', 'LST', -2.25, 'up'),
-('Maze Bank', 'MBANK', -0.39, 'down'),
-('Post OP', 'PSTP', 2.92, 'up'),
-('RON', 'RON', 2.44, 'down'),
-('Up-n-Atom Burger', 'UNAB', 2.22, 'down'),
-('Weazel', 'NEWS', -3.34, 'down');
+('24/7', 'TNYFVN', -2.42, 'down'),
+('Ammu-Nation', 'AMNA', 4.51, 'up'),
+('Augury Insurance', 'AUGIN', -1.33, 'down'),
+('Downtown Cab Co.', 'DCC', 3.12, 'up'),
+('ECola', 'ECLA', -1.33, 'down'),
+('Fleeca', 'FLCA', 2.89, 'up'),
+('Globe Oil', 'GLBO', -3.77, 'down'),
+('GoPostal', 'GPSTL', 4.78, 'up'),
+('Lifeinvader', 'LIVDR', 3.38, 'up'),
+('Los Santos Air', 'LSA', 0.03, 'down'),
+('Los Santos Customs', 'LSC', 1.97, 'up'),
+('Los Santos Transit', 'LST', -2.26, 'up'),
+('Maze Bank', 'MBANK', -1.01, 'down'),
+('Post OP', 'PSTP', 4.72, 'up'),
+('RON', 'RON', -1.48, 'down'),
+('Up-n-Atom Burger', 'UNAB', 0.67, 'up'),
+('Weazel', 'NEWS', -1.03, 'up');
 
 -- --------------------------------------------------------
 
@@ -1652,7 +1652,7 @@ CREATE TABLE `users` (
   `group` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'user',
   `inventory` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `job` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed',
-  `job_grade` int(11) DEFAULT 0,
+  `job_grade` int(11) DEFAULT NULL,
   `loadout` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
   `permission_level` int(11) DEFAULT 0,
@@ -1667,7 +1667,7 @@ CREATE TABLE `users` (
   `last_property` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `job2` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'unemployed2',
-  `job2_grade` int(11) DEFAULT 0,
+  `job2_grade` int(11) DEFAULT NULL,
   `jeton` int(11) DEFAULT 0,
   `pet` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
